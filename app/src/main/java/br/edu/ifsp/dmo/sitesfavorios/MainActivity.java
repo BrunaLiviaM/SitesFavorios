@@ -2,6 +2,7 @@ package br.edu.ifsp.dmo.sitesfavorios;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -65,6 +66,6 @@ public class MainActivity extends AppCompatActivity implemen SiteItemClick{
         public void clickCoracaoSiteItem(int posicao){
         Site site = dataSource.get(posicao);
         site.setFavorito(!site.isFavorito());
-        recyclerView.getAdapter().notifydataSetChanged();
+        recyclerView.getAdapter().notifyDataSetChanged();
         }
 }
